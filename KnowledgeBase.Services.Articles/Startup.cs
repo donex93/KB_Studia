@@ -46,6 +46,11 @@ namespace KnowledgeBase.Services.Articles
 
             Container = builder.Build();
 
+            using (var context = Container.Resolve<ArticlesDbContext>())
+            {
+                context.Database.Migrate();
+            }
+
             return new AutofacServiceProvider(Container);
         }
 

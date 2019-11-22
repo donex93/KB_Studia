@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeBase.API", "KnowledgeBase.API\KnowledgeBase.API.csproj", "{62F427F6-2FF3-4B4E-BC2E-ED340A1E255B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeBase.API", "KnowledgeBase.API\KnowledgeBase.API.csproj", "{62F427F6-2FF3-4B4E-BC2E-ED340A1E255B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeBase.Services.Articles", "KnowledgeBase.Services.Articles\KnowledgeBase.Services.Articles.csproj", "{D87C44EE-A4B0-4A16-A7C0-664373E07C9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeBase.Services.Articles", "KnowledgeBase.Services.Articles\KnowledgeBase.Services.Articles.csproj", "{D87C44EE-A4B0-4A16-A7C0-664373E07C9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeBase.Common", "KnowledgeBase.Common\KnowledgeBase.Common.csproj", "{F7937894-D9D6-48C0-A6FB-10258C9C04B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeBase.Common", "KnowledgeBase.Common\KnowledgeBase.Common.csproj", "{F7937894-D9D6-48C0-A6FB-10258C9C04B9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{72010553-A926-4E75-9202-9022CA272EBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F7937894-D9D6-48C0-A6FB-10258C9C04B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7937894-D9D6-48C0-A6FB-10258C9C04B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7937894-D9D6-48C0-A6FB-10258C9C04B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72010553-A926-4E75-9202-9022CA272EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72010553-A926-4E75-9202-9022CA272EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72010553-A926-4E75-9202-9022CA272EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72010553-A926-4E75-9202-9022CA272EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

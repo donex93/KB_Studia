@@ -1,0 +1,60 @@
+version: '3.4'
+
+services:
+  knowledgebase.api:
+    image: ${DOCKER_REGISTRY-}knowledgebaseapi
+    container_name: knowledgebase_api
+    networks: 
+      - knowledge_base
+    build:
+      context: .
+      dockerfile: KnowledgeBase.API/Dockerfile
+
+
+
+  knowledgebase.services.articles:
+    image: ${DOCKER_REGISTRY-}knowledgebaseservicesarticles
+    container_name: knowledgebase_services_articles
+    networks: 
+      - knowledge_base
+    build:
+      context: .
+      dockerfile: KnowledgeBase.Services.Articles/Dockerfile
+
+  rabbit:
+    image: 'rabbitmq:3-management'
+    container_name: rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+            - "RABBITMQ_DEFAULT_PASS=rabbit"
+            - "RABBITMQ_DEFAULT_USER=user"
+    networks:
+      - knowledge_base
+
+  mysql:
+    image: 'mysql:5.7'
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+            - "MYSQL_ROOT_PASSWORD=dbGrozy"
+    networks:
+      - knowledge_base
+
+  phpmyadmin:
+    image: 'phpmyadmin/phpmyadmin'
+    container_name: phpmyadmin
+    ports:
+      - "8081:80"
+    links:
+      - "mysql:db"
+    environment:
+            - "MYSQL_ROOT_PASSWORD=dbGrozy"
+    networks:
+      - knowledge_base
+
+networks:
+  knowledge_base:
+      external: false

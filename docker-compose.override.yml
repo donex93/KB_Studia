@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  knowledgebase.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  knowledgebase.services.articles:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
