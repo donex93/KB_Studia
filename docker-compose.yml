@@ -9,8 +9,7 @@ services:
     build:
       context: .
       dockerfile: KnowledgeBase.API/Dockerfile
-
-
+    restart: always
 
   knowledgebase.services.articles:
     image: ${DOCKER_REGISTRY-}knowledgebaseservicesarticles
@@ -20,6 +19,7 @@ services:
     build:
       context: .
       dockerfile: KnowledgeBase.Services.Articles/Dockerfile
+    restart: always
 
   rabbit:
     image: 'rabbitmq:3-management'
