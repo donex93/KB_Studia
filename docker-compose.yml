@@ -50,11 +50,9 @@ services:
       - "8081:80"
     links:
       - "mysql:db"
-    environment:
-            - "MYSQL_ROOT_PASSWORD=dbGrozy"
     networks:
       - knowledge_base
 
 networks:
   knowledge_base:
-      external: false
+    external: false
